@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    font-family: 'Cairo', sans-serif;
+    background-color: #f9f9f9;
+
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+}
+/* Selling Points Page */
+.cards-container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: dense;
+    direction: rtl;
+
+}
+.card{
+    background-color: #ffffff;
+    color: #4aa19e;
+    border-radius: 15px;
+    text-align: right;
+    margin: 1.5rem 0.75rem ;
+    padding: 0.5rem;
+    
+}
+.card h1{
+    color: #000000;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.card span{
+    margin-right: 2px;
+}
+.location,
+.number{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: right;
+}
+.location i,
+.number i{
+    background-color: #4aa19e;
+    color: #ffffff;
+    margin: 5px;
+    margin-left: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 31px;
+}
+
+
+/* Footer */
+footer{
+    background-color: #F2F2F2;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   padding-top: 30px;
+}
+footer img{
+    max-width: 4rem;
+}
+footer ul{
+    list-style: none;
+}
+footer i{
+    color: #4AA19E;
+    padding: 5px;
+}
+footer a{
+    text-decoration: none;
+    color: #000000;
+}
+.footer-sentence{
+    margin: 7px;
+}
+
+.contact-info ul{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.contact-info li{
+    padding-left: 25px;
+}
+.privacy{
+    color: #919191;
+    text-align: center;
+    font-size: 17px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+}
+
+/* Footer Media */
+@media(max-width:1348px){
+    .privacy{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(max-width:836px){
+    footer i{
+       display: none;
+    }
+    .contact-info ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Selling Points Cards media */
+@media(max-width:1077px){
+    .card h1{
+        font-size: 20px;
+    }
+    .card{
+       font-size: 15px;
+        
+    }
+}
+@media(max-width:884px){
+    .card h1{
+        font-size: 19px;
+    }
+    .card{
+       font-size: 14px;
+        
+    }
+}
+@media(max-width:725px){
+    .cards-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .card{
+        margin: 1rem 0.5rem ;
+        padding: 0.5rem;
+        
+    }
+}
+@media(max-width:450px){
+    .card h1{
+        font-size: 18px;
+    }
+    .card{
+       font-size: 13px;
+        
+    }
+}
+@media(max-width:430px){
+    .cards-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
